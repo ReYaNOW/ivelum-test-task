@@ -29,7 +29,6 @@ def change_page_body(response):
     return soup.prettify()
 
 
-@app.get('/')
 @app.get('/{path:path}')
 async def serve_my_app(request: Request, path=''):
     query = f'?{request.query_params}' if request.query_params else ''
