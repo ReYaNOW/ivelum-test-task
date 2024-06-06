@@ -27,10 +27,15 @@ async def make_request(final_url):
 def change_page_body(text):
     """adding to all six-letter words ™ symbols"""
     soup = BeautifulSoup(text, 'html.parser')
-
+    
+    # you can check what does those things means here
     regex = r'.*(^|\s)\b(\w{6})\b($|\s)[\s\S]*'
+    # https://regex101.com/r/u2XW70
+    sub_regex = r'(^|\s)\b(\w{6})\b($|\s)[\s\S]'
+    # https://regex101.com/r/tCPJAi/1
+
     for elem in soup.find_all(string=re.compile(regex)):
-        elem.replace_with(re.sub(r'[$|\s]\b(\w{6})\b[$|\s]', r'\1™', elem))
+        elem.replace_with(re.sub(sub_regex, r'\1\2™', elem))
 
     for elem in soup.find_all(['img', 'link', 'script']):
         if elem.get('src'):
