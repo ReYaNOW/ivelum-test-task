@@ -1,6 +1,8 @@
 ### Описание
 Тестовое задание для ivelum 
 
+Стек: Python3.11, FastApi, aiohttp, beautifulsoup4
+
 ### Установка
 Приложение использует виртуальное окружение [Poetry](https://python-poetry.org/docs/#installing-with-pipx)
 
