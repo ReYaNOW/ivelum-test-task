@@ -1,7 +1,7 @@
 PORT ?= 8080
 
 
-make install:
+install:
 	poetry install --no-root
 
 start:
