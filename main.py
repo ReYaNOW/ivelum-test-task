@@ -28,8 +28,9 @@ def change_page_body(text):
     """adding to all six-letter words ™ symbols"""
     soup = BeautifulSoup(text, 'html.parser')
 
-    for elem in soup.find_all(string=re.compile(r'\b\w{6}\b')):
-        elem.replace_with(re.sub(r'\b(\w{6})\b', r'\1™', elem))
+    regex = r'.*(^|\s)\b(\w{6})\b($|\s)[\s\S]*'
+    for elem in soup.find_all(string=re.compile(regex)):
+        elem.replace_with(re.sub(r'[$|\s]\b(\w{6})\b[$|\s]', r'\1™', elem))
 
     for elem in soup.find_all(['img', 'link', 'script']):
         if elem.get('src'):
