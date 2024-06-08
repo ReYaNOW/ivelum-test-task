@@ -14,7 +14,7 @@ http-прокси-сервер, запускаемый локально, кот�
  - Открыть задеплоенный на render.com [тестовый вариант](https://ivelum-test-task.onrender.com)
  - [Развернуть прокси-сервер локально](#Как-развернуть-прокси-сервер-локально)  
 
-![App preview](https://github.com/ReYaNOW/ReYaNOW/blob/main/Images/proxy_preview_img.png?raw=true)
+![App preview™](https://github.com/ReYaNOW/ReYaNOW/blob/main/Images/proxy_preview_img.png?raw=true)
 
 ## Как развернуть прокси-сервер локально
 Для этого необходим [Poetry™](https://python-poetry.org/docs/#installing-with-pipx)
@@ -31,7 +31,7 @@ git clone https://github.com/ReYaNOW/ivelum-test-task.git
 make install
 ```
 
-3. Запустить локальный сервер и открыть http://127.0.0.1:8080
+3. Запустить локальный сервер™ и открыть http://127.0.0.1:8080
   
 ```
 make start
